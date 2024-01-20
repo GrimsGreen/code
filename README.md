@@ -19,5 +19,5 @@ def ngrok_thread(token):
     print(" * ngrok tunnel \"{}\" -> \"http://127.0.0.1:{}/\"".format(public_url, 9090))
     return public_url
 threading.Thread(target=run_proxy).start() 
-threading.Thread(target=ngrok_thread,args=['2az4F9upl4u86U9CbAv2CUR5RbD_3UxarnZJzKtCc4bALBojP']).start()
+threading.Thread(target=ngrok_thread,args=[token]).start()
 input('>>>')
