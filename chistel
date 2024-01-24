@@ -23,6 +23,6 @@ def run_proxy_server():
   print("Output:", process.stdout.decode())
   print("Errors:", process.stderr.decode())
 threading.Thread(target=run_proxy).start()
-!curl --proxy http://127.0.01:9090 icanhazip.com
+!curl --proxy http://127.0.0.1:9090 icanhazip.com
 sleep(5)
-!chisel client --auth admin:br2UGJ3geBJpXQ6cAiXe http://tun.kk01.ir R:9999:0.0.0.0:9090
+os.popen(f"chisel client --auth admin:br2UGJ3geBJpXQ6cAiXe http://tun.kk01.ir R:{Port}:0.0.0.0:9090").read()
