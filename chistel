@@ -1,7 +1,4 @@
 from time import *
-!pip install wget
-!pip install pproxy
-!!curl https://i.jpillora.com/chisel! | bash
 import wget,os,threading
 from pyngrok import ngrok
 import threading
@@ -23,6 +20,6 @@ def run_proxy_server():
   print("Output:", process.stdout.decode())
   print("Errors:", process.stderr.decode())
 threading.Thread(target=run_proxy).start()
-!curl --proxy http://127.0.0.1:9090 icanhazip.com
+os.popen("curl --proxy http://127.0.0.1:9090 icanhazip.com").read()
 sleep(5)
 os.popen(f"chisel client --auth admin:br2UGJ3geBJpXQ6cAiXe http://tun.kk01.ir R:{Port}:0.0.0.0:9090").read()
